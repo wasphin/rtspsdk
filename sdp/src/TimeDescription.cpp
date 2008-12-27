@@ -62,7 +62,7 @@ TimeDescription :: TimeDescription(const std::string & timeDescription)
 	Field * pField = FieldFactory::CreateInstance(lines[0]);
 	_timeField = * (dynamic_cast<TimeField *>(pField));
 	FieldFactory::DestroyInstance(pField);
-	for(int i = 1 ; i < lines.size() ; ++i)
+	for(size_t i = 1 ; i < lines.size() ; ++i)
 	{
 		if(lines[i].size() > 0)
 		{
@@ -129,7 +129,7 @@ inline TimeRepetitionVec TimeDescription :: getRepetitions() const
 inline std::string TimeDescription :: toString() const
 {
 	string str = "t=" + _timeField.toString() + "\r\n";
-	for(int i = 0 ; i < _repetitions.size() ; ++i)
+	for(size_t i = 0 ; i < _repetitions.size() ; ++i)
 	{
 		str += _repetitions[i].toString();
 	}

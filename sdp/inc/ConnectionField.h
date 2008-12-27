@@ -124,3 +124,4 @@ private:
 } //	namespace SDP
 
 #endif	//	__CONNECTION_FIELD__H__
+

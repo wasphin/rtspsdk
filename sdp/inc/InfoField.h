@@ -79,3 +79,4 @@ public:
 } //	namespace SDP
 
 #endif	//	__INFO_FIELD__H__
+

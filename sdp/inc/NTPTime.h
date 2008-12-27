@@ -47,7 +47,7 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //	PoCo headers
-#include "Poco/types.h"
+#include "Poco/Types.h"
 #include "Poco/DateTime.h"
 #include "Poco/Timespan.h"
 
@@ -60,7 +60,7 @@ namespace SDP {
 //	Definitions and macroses
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#define NTPCONST	(2208988800)
+#define NTPCONST	(0x83AA7E80UL)
 // The seconds difference between NTP Time and UNIX Time
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -115,3 +115,4 @@ private:
 } //	namespace SDP
 
 #endif	//	__NTP_TIME__H__
+

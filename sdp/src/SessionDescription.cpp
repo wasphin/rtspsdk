@@ -109,7 +109,7 @@ SessionDescription :: SessionDescription(const string & sessionDescription)
 	_name = * dynamic_cast<SessionNameField *>(pField);
 	FieldFactory::DestroyInstance(pField);
 
-	for(int i = 3 ; i < lines.size() ; ++i)
+	for(size_t i = 3 ; i < lines.size() ; ++i)
 	{
 		pField = FieldFactory::CreateInstance(lines[i]);
 		switch(lines[i][0])

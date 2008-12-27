@@ -34,7 +34,7 @@
 // ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 //
-******************************************************************************//
+*****************************************************************************/
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	Includes
@@ -51,3 +51,5 @@ const std::string MediaTypes::Data			= "data";
 const std::string MediaTypes::Control		= "control";
 
 } //	namespace SDP
+
+

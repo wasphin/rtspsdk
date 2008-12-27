@@ -48,7 +48,7 @@
 #include <string>
 
 //	PoCo headers
-#include "Poco/types.h"
+#include "Poco/Types.h"
 
 //	headers
 #include "sdp_parser.h"
@@ -80,3 +80,4 @@ SDP_PARSER_API std::string trim(const std::string & str, char trimChar);
 } //	namespace SDP
 
 #endif	//	__COMMON__H__
+

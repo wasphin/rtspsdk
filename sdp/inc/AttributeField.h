@@ -109,3 +109,4 @@ private:
 } //	namespace SDP
 
 #endif	//	__ATTRIBUTE_FIELD__H__
+

@@ -74,3 +74,4 @@ typedef struct SDP_PARSER_API _EncryptionMethod
 } //	namespace SDP
 
 #endif	//	__ENCRYPTION_METHODS__H__
+
