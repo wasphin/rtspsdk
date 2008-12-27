@@ -78,3 +78,4 @@ public:
 } //	namespace SDP
 
 #endif	//	__SESSION_NAME_FIELD__H__
+

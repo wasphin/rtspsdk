@@ -113,8 +113,6 @@ inline unsigned short PortRange :: getFirstPort() const
 
 void PortRange :: setFirstPort(unsigned short firstPort)
 {
-	poco_assert((0 < firstPort) && (firstPort < 65536));
-
 	_firstPort = firstPort;
 }
 

@@ -96,7 +96,7 @@ TimeRepetitionField :: TimeRepetitionField(const string & value)
 	{
 	}
 
-	for(int i = 2 ; i < parts.size() ; ++i)
+	for(size_t i = 2 ; i < parts.size() ; ++i)
 	{
 		try
 		{

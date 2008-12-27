@@ -1,0 +1,8 @@
+import os
+Import('env')
+ownenv = env.Clone()
+ownenv.Append(CPPPATH='inc')
+
+VariantDir('obj', 'src', duplicate=0)
+library = ownenv.SharedLibrary('lib/sdp', Glob('obj/*.cpp'))
+

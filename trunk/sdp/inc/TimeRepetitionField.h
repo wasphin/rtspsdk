@@ -47,7 +47,7 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //	PoCo headers
-#include "Poco/TimeSpan.h"
+#include "Poco/Timespan.h"
 
 #include "sdp_parser.h"
 #include "common.h"
@@ -124,3 +124,4 @@ private:
 } //	namespace SDP
 
 #endif	//	__TIME_REPETITION_FIELD__H__
+

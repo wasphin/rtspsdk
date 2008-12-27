@@ -75,7 +75,7 @@ TimeZoneAdjustmentField :: TimeZoneAdjustmentField(const string & value)
 		throw new InvalidArgumentException();		
 	}
 
-	for (int i = 0; i < parts.size() - 1; i += 2)
+	for (size_t i = 0; i < parts.size() - 1; i += 2)
 	{
 		_zoneAdjustments.push_back(TimeZoneAdjustment(parts[i] + " " + parts[i + 1]));
 	}
