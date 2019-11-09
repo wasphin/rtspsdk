@@ -36,27 +36,26 @@
 //
 ******************************************************************************/
 
+#include "Poco/RTSP/RTSPClientSession.h"
+#include "Poco/RTSP/RTSPFixedLengthStream.h"
+#include "Poco/RTSP/RTSPHeaderStream.h"
+#include "Poco/RTSP/RTSPRequest.h"
+#include "Poco/RTSP/RTSPResponse.h"
+#include "Poco/RTSP/RTSPStream.h"
+
+#include "Poco/CountingStream.h"
+#include "Poco/NumberFormatter.h"
+#include "Poco/Net/NetException.h"
+
 #include <iostream>
 
-#include "Poco/Net/NetException.h"
-#include "Poco/NumberFormatter.h"
-#include "Poco/CountingStream.h"
-
-#include "RTSPStream.h"
-#include "RTSPHeaderStream.h"
-#include "RTSPFixedLengthStream.h"
-#include "RTSPClientSession.h"
-#include "RTSPRequest.h"
-#include "RTSPResponse.h"
-
-using Poco::NumberFormatter;
-using Poco::IllegalStateException;
-using Poco::Net::NetException;
-using Poco::Net::MessageException;
-
-
+namespace Poco {
 namespace RTSP {
 
+using Poco::IllegalStateException;
+using Poco::NumberFormatter;
+using Poco::Net::MessageException;
+using Poco::Net::NetException;
 
 RTSPClientSession::RTSPClientSession():
 	_port(RTSPSession::RTSP_PORT),
@@ -335,4 +334,5 @@ void RTSPClientSession::setRequestStream(std::ostream* pRequestStream)
 	_pRequestStream = pRequestStream;
 }
 
-} // namespace RTSP
+} //	namespace RTSP
+} //	namespace Poco

@@ -36,23 +36,22 @@
 //
 ******************************************************************************/
 
+#include "Poco/RTSP/RTSPRequest.h"
+
+#include "Poco/NumberFormatter.h"
+#include "Poco/Net/HTTPSession.h"
+#include "Poco/Net/NameValueCollection.h"
+#include "Poco/Net/NetException.h"
 
 #include <cctype>
 
-#include "Poco/Net/HTTPSession.h"
-#include "Poco/Net/NetException.h"
-#include "Poco/Net/NameValueCollection.h"
-#include "Poco/NumberFormatter.h"
-
-#include "RTSPRequest.h"
-
+namespace Poco {
+namespace RTSP {
 
 using Poco::NumberFormatter;
-using Poco::Net::NotAuthenticatedException;
-using Poco::Net::NoMessageException;
 using Poco::Net::MessageException;
-
-namespace RTSP {
+using Poco::Net::NoMessageException;
+using Poco::Net::NotAuthenticatedException;
 
 const std::string RTSPRequest::RTSP_NONE;
 const std::string RTSPRequest::RTSP_DESCRIBE		= "DESCRIBE";
@@ -186,5 +185,5 @@ void RTSPRequest::read(std::istream& istr)
 	setVersion(version);
 }
 
-} // namespace RTSP
-
+} //	namespace RTSP
+} //	namespace Poco

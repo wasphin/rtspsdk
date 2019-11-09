@@ -40,11 +40,12 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "SessionNameField.h"
+#include "Poco/SDP/SessionNameField.h"
+
+namespace Poco {
+namespace SDP {
 
 using std::string;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	SessionNameField class implementation
@@ -83,3 +84,4 @@ SessionNameField & SessionNameField :: operator=(const SessionNameField & sessio
 }
 
 } //	namespace SDP
+} //	namespace Poco

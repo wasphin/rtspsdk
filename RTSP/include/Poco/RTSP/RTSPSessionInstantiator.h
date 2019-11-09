@@ -43,21 +43,17 @@
 #ifndef __RTSP_SESSION_INSTANTIATOR__H__
 #define __RTSP_SESSION_INSTANTIATOR__H__
 
+#include "Poco/RTSP/RTSPSession.h"
 
-#include "Poco/Net/Net.h"
 #include "Poco/URI.h"
+#include "Poco/Net/Net.h"
 
-#include "rtsp_sdk.h"
-#include "RTSPSession.h"
-
-
+namespace Poco {
 namespace RTSP {
-
 
 class RTSPClientSession;
 
-
-class RTSP_SDK_API RTSPSessionInstantiator
+class RTSP_API RTSPSessionInstantiator
 	/// A factory for RTSPClientSession objects.
 	///
 	/// Creates a RTSP session for a given URI.
@@ -114,8 +110,7 @@ inline Poco::UInt16 RTSPSessionInstantiator::proxyPort() const
 	return _proxyPort;
 }
 
-
-} // namespace RTSP
-
+} //	namespace RTSP
+} //	namespace Poco
 
 #endif // __RTSP_SESSION_INSTANTIATOR__H__

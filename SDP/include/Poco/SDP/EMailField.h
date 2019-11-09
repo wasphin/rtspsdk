@@ -46,17 +46,17 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
-#include "common.h"
-#include "Field.h"
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/Field.h"
 
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	EMailField class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API EMailField : public Field
+class SDP_API EMailField : public Field
 	/// An E-Mail represents an e= field contained within a SessionDescription.
 {
 public:
@@ -108,6 +108,7 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__E_MAIL_FIELD__H__
 

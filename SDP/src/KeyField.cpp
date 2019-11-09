@@ -40,11 +40,12 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "KeyField.h"
+#include "Poco/SDP/KeyField.h"
+
+namespace Poco {
+namespace SDP {
 
 using std::string;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	KeyField class implementation
@@ -135,3 +136,4 @@ void KeyField :: Init()
 }
 
 } //	namespace SDP
+} //	namespace Poco

@@ -40,25 +40,26 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-//	PoCo headers
-#include "Poco/Timespan.h"
-#include "Poco/NumberParser.h"
-#include "Poco/NumberFormatter.h"
-#include "Poco/Exception.h"
+#include "Poco/SDP/TimeZoneAdjustment.h"
+#include "Poco/SDP/NTPTime.h"
 
-#include "NTPTime.h"
-#include "TimeZoneAdjustment.h"
+//	PoCo headers
+#include "Poco/Exception.h"
+#include "Poco/NumberFormatter.h"
+#include "Poco/NumberParser.h"
+#include "Poco/Timespan.h"
+
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
-using Poco::Int64;
 using Poco::DateTime;
-using Poco::Timespan;
-using Poco::NumberParser;
+using Poco::Int64;
 using Poco::NumberFormatter;
+using Poco::NumberParser;
 using Poco::SyntaxException;
-
-namespace SDP {
+using Poco::Timespan;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	TimeZoneAdjustment class implementation
@@ -160,3 +161,4 @@ inline std::string TimeZoneAdjustment :: toString() const
 }
 
 } //	namespace SDP
+} //	namespace Poco

@@ -46,18 +46,18 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
-#include "common.h"
-#include "Field.h"
-#include "PortRange.h"
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/Field.h"
+#include "Poco/SDP/PortRange.h"
 
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	MediaField class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API MediaField : public Field
+class SDP_API MediaField : public Field
 	/// A Media represents an m= field contained within a MediaDescription. The Media identifies 
 	/// information about the format(s) of the media associated with the MediaDescription. 
 	/// 
@@ -132,6 +132,7 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__MEDIA_FIELD__H__
 

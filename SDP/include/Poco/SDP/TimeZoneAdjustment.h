@@ -46,19 +46,19 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/Common.h"
+
 //	PoCo headers
 #include "Poco/DateTime.h"
 
-#include "sdp_parser.h"
-#include "common.h"
-
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	TimeZoneAdjustment class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API TimeZoneAdjustment
+class SDP_API TimeZoneAdjustment
     /// From RFC 2327:
     /// To schedule a repeated session which spans a change from daylight-
     /// saving time to standard time or vice-versa, it is necessary to
@@ -115,6 +115,7 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__TIME_ZONE_ADJUSTMENT__H__
 

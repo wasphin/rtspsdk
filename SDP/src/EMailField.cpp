@@ -40,11 +40,12 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "EMailField.h"
+#include "Poco/SDP/EMailField.h"
+
+namespace Poco {
+namespace SDP {
 
 using std::string;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	MediaField class implementation
@@ -179,3 +180,4 @@ void EMailField :: Init()
 }
 
 } //	namespace SDP
+} //	namespace Poco

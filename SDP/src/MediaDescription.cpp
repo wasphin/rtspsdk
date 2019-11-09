@@ -40,12 +40,13 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "FieldFactory.h"
-#include "MediaDescription.h"
+#include "Poco/SDP/MediaDescription.h"
+#include "Poco/SDP/FieldFactory.h"
+
+namespace Poco {
+namespace SDP {
 
 using std::string;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	MediaDescription class implementation
@@ -304,5 +305,4 @@ string MediaDescription :: toString() const
 }
 
 } //	namespace SDP
-
-
+} //	namespace Poco

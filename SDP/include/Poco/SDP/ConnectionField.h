@@ -46,18 +46,18 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
-#include "common.h"
-#include "Field.h"
-#include "AddressRange.h"
+#include "Poco/SDP/AddressRange.h"
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/Field.h"
 
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	ConnectionField class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API ConnectionField : public Field
+class SDP_API ConnectionField : public Field
     /// A Connection represents the c= field and identifies a network address on which media
     /// can be recieved.
     /// 
@@ -122,6 +122,7 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__CONNECTION_FIELD__H__
 

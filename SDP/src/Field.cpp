@@ -40,16 +40,17 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/Field.h"
+
 //	PoCo headers
 #include "Poco/Util/OptionException.h"
 
-#include "Field.h"
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
 using Poco::Util::InvalidArgumentException;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	Field class implementation
@@ -150,3 +151,4 @@ Field :: Field()
 }
 
 } //	namespace SDP
+} //	namespace Poco

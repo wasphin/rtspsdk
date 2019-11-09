@@ -40,17 +40,18 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/SessionDescription.h"
+#include "Poco/SDP/FieldFactory.h"
+
 //	PoCo headers
 #include "Poco/Util/OptionException.h"
 
-#include "FieldFactory.h"
-#include "SessionDescription.h"
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
 using Poco::Util::InvalidArgumentException;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	SessionDescription class implementation
@@ -542,3 +543,4 @@ std::string SessionDescription :: toString() const
 }
 
 } //	namespace SDP
+} //	namespace Poco

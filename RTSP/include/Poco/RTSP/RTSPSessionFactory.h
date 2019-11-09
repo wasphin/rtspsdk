@@ -43,26 +43,23 @@
 #ifndef __RTSP_SESSION_FACTORY__H__
 #define __RTSP_SESSION_FACTORY__H__
 
+#include "Poco/RTSP/RTSP.h"
 
-#include "Poco/Net/Net.h"
 #include "Poco/Mutex.h"
-#include "Poco/URI.h"
-#include "Poco/SingletonHolder.h"
 #include "Poco/SharedPtr.h"
+#include "Poco/SingletonHolder.h"
+#include "Poco/URI.h"
+#include "Poco/Net/Net.h"
+
 #include <map>
 
-#include "rtsp_sdk.h"
-
+namespace Poco {
 namespace RTSP {
-
-
 
 class RTSPSessionInstantiator;
 class RTSPClientSession;
 
-
-
-class RTSP_SDK_API RTSPSessionFactory
+class RTSP_API RTSPSessionFactory
 	/// A factory for RTSPClientSession objects.
 	///
 	/// Given a URI, this class creates a RTSPClientSession
@@ -152,6 +149,7 @@ inline Poco::UInt16 RTSPSessionFactory::proxyPort() const
 	return _proxyPort;
 }
 
-} // namespace RTSP
+} //	namespace RTSP
+} //	namespace Poco
 
 #endif // __RTSP_SESSION_FACTORY__H__

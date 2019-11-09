@@ -46,17 +46,17 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
-#include "common.h"
-#include "Field.h"
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/Field.h"
 
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	KeyField class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API KeyField : public Field
+class SDP_API KeyField : public Field
 	/// A Key represents the k= field contained within either a MediaDescription
 	/// or a SessionDescription.
 {
@@ -97,6 +97,7 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__KEY_FIELD__H__
 

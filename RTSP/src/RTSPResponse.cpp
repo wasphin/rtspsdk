@@ -36,31 +36,29 @@
 //
 ******************************************************************************/
 
-#include <cctype>
+#include "Poco/RTSP/RTSPResponse.h"
 
-#include "Poco/Net/NetException.h"
+#include "Poco/DateTime.h"
+#include "Poco/DateTimeFormat.h"
+#include "Poco/DateTimeFormatter.h"
+#include "Poco/DateTimeParser.h"
 #include "Poco/NumberFormatter.h"
 #include "Poco/NumberParser.h"
-#include "Poco/DateTime.h"
-#include "Poco/DateTimeFormatter.h"
-#include "Poco/DateTimeFormat.h"
-#include "Poco/DateTimeParser.h"
+#include "Poco/Net/NetException.h"
 
-#include "RTSPResponse.h"
+#include <cctype>
 
-
-using Poco::DateTime;
-using Poco::NumberFormatter;
-using Poco::NumberParser;
-using Poco::DateTimeFormatter;
-using Poco::DateTimeFormat;
-using Poco::DateTimeParser;
-using Poco::Net::NoMessageException;
-using Poco::Net::MessageException;
-
-
+namespace Poco {
 namespace RTSP {
 
+using Poco::DateTime;
+using Poco::DateTimeFormat;
+using Poco::DateTimeFormatter;
+using Poco::DateTimeParser;
+using Poco::NumberFormatter;
+using Poco::NumberParser;
+using Poco::Net::MessageException;
+using Poco::Net::NoMessageException;
 
 const std::string RTSPResponse::RTSP_REASON_CONTINUE							= "Continue";
 
@@ -338,5 +336,5 @@ const std::string& RTSPResponse::getReasonForStatus(RTSPStatus status)
 	}
 }
 
-
-} // namespace RTSP
+} //	namespace RTSP
+} //	namespace Poco

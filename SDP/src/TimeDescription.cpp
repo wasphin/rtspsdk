@@ -40,12 +40,13 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "FieldFactory.h"
-#include "TimeDescription.h"
+#include "Poco/SDP/TimeDescription.h"
+#include "Poco/SDP/FieldFactory.h"
+
+namespace Poco {
+namespace SDP {
 
 using std::string;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	TimeDescription class implementation
@@ -138,3 +139,4 @@ inline std::string TimeDescription :: toString() const
 }
 
 } //	namespace SDP
+} //	namespace Poco

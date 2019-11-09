@@ -40,24 +40,25 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-//	PoCo headers
-#include "Poco/NumberParser.h"
-#include "Poco/NumberFormatter.h"
-#include "Poco/Exception.h"
-#include "Poco/Util/OptionException.h"
-#include "Poco/Net/IPAddress.h"
+#include "Poco/SDP/ConnectionField.h"
 
-#include "ConnectionField.h"
+//	PoCo headers
+#include "Poco/Exception.h"
+#include "Poco/NumberFormatter.h"
+#include "Poco/NumberParser.h"
+#include "Poco/Net/IPAddress.h"
+#include "Poco/Util/OptionException.h"
+
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
-using Poco::NumberParser;
-using Poco::NumberFormatter;
 using Poco::NullPointerException;
-using Poco::Util::InvalidArgumentException;
+using Poco::NumberFormatter;
+using Poco::NumberParser;
 using Poco::Net::IPAddress;
-
-namespace SDP {
+using Poco::Util::InvalidArgumentException;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	ConnectionField class implementation
@@ -195,3 +196,4 @@ void ConnectionField :: Init()
 }
 
 } //	namespace SDP
+} //	namespace Poco

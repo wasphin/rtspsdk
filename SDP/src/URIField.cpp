@@ -40,13 +40,14 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "URIField.h"
+#include "Poco/SDP/URIField.h"
+
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
 using Poco::URI;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	URIField class implementation
@@ -99,3 +100,4 @@ inline URI URIField :: getURI() const
 }
 
 } //	namespace SDP
+} //	namespace Poco

@@ -46,11 +46,11 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
-#include "common.h"
-#include "TimeField.h"
-#include "TimeRepetitionField.h"
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/TimeField.h"
+#include "Poco/SDP/TimeRepetitionField.h"
 
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -63,7 +63,7 @@ typedef std::vector<TimeRepetitionField> TimeRepetitionVec;
 //	TimeDescription class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API TimeDescription
+class SDP_API TimeDescription
     /// This class describes a time description. A session description may have one or more
     /// time descriptions.
 {
@@ -104,6 +104,7 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__TIME_DESCRIPTION__H__
 

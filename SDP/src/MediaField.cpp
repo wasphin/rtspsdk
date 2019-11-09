@@ -40,18 +40,19 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/MediaField.h"
+
 //	PoCo headers
 #include "Poco/NumberParser.h"
 #include "Poco/Util/OptionException.h"
 
-#include "MediaField.h"
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
 using Poco::NumberParser;
 using Poco::Util::InvalidArgumentException;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	MediaField class implementation
@@ -183,3 +184,4 @@ std::string MediaField :: buildValueString()
 }
 
 } //	namespace SDP
+} //	namespace Poco

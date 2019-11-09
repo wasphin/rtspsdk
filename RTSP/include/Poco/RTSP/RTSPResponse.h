@@ -42,19 +42,18 @@
 #ifndef __RTSP_RESPONSE__H__
 #define __RTSP_RESPONSE__H__
 
+#include "Poco/RTSP/RTSPMessage.h"
+
+#include "Poco/Timestamp.h"
+#include "Poco/Net/Net.h"
 
 #include <vector>
 
-#include "Poco/Net/Net.h"
-#include "Poco/Timestamp.h"
-
-#include "rtsp_sdk.h"
-#include "RTSPMessage.h"
-
+namespace Poco {
 namespace RTSP {
 
 
-class RTSP_SDK_API RTSPResponse: public RTSPMessage
+class RTSP_API RTSPResponse: public RTSPMessage
 	/// This class encapsulates an RTSP response
 	/// message.
 	///
@@ -266,7 +265,8 @@ inline const std::string& RTSPResponse::getReason() const
 }
 
 
-} // namespace RTSP
+} //	namespace RTSP
+} //	namespace Poco
 
 
 #endif // __RTSP_RESPONSE__H__

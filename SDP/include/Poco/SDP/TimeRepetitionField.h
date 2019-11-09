@@ -46,13 +46,13 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/Field.h"
+
 //	PoCo headers
 #include "Poco/Timespan.h"
 
-#include "sdp_parser.h"
-#include "common.h"
-#include "Field.h"
-
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -65,7 +65,7 @@ typedef std::vector<Poco::Timespan> TimespanVec;
 //	TimeRepetitionField class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API TimeRepetitionField : public Field
+class SDP_API TimeRepetitionField : public Field
 	/// This class contains details regarding the repetition of a given time.
 {
 public:
@@ -122,6 +122,7 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__TIME_REPETITION_FIELD__H__
 

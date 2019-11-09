@@ -40,8 +40,9 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "EncryptionMethods.h"
+#include "Poco/SDP/EncryptionMethods.h"
 
+namespace Poco {
 namespace SDP {
 
 const std::string None				= "clear";
@@ -50,3 +51,4 @@ const std::string Uri				= "uri";
 const std::string Prompt			= "prompt";
 
 } //	namespace SDP
+} //	namespace Poco

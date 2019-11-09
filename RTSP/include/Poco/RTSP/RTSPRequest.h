@@ -43,15 +43,14 @@
 #ifndef __RTSP_REQUEST__H__
 #define __RTSP_REQUEST__H__
 
+#include "Poco/RTSP/RTSPMessage.h"
 
 #include "Poco/Net/Net.h"
 
-#include "rtsp_sdk.h"
-#include "RTSPMessage.h"
-
+namespace Poco {
 namespace RTSP {
 
-class RTSP_SDK_API RTSPRequest: public RTSPMessage
+class RTSP_API RTSPRequest: public RTSPMessage
 	/// This class encapsulates an RTSP request
 	/// message.
 	///
@@ -158,6 +157,7 @@ inline const std::string& RTSPRequest::getURI() const
 	return _uri;
 }
 
-} // namespace RTSP
+} //	namespace RTSP
+} //	namespace Poco
 
 #endif // __RTSP_REQUEST__H__

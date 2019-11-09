@@ -43,21 +43,22 @@
 #ifndef __RTSP_SESSION__H__
 #define __RTSP_SESSION__H__
 
+#include "Poco/RTSP/RTSP.h"
 
+#include "Poco/Exception.h"
+#include "Poco/Timespan.h"
 #include "Poco/Net/Net.h"
 #include "Poco/Net/StreamSocket.h"
-#include "Poco/Timespan.h"
-#include "Poco/Exception.h"
+
 #include <ios>
 
-#include "rtsp_sdk.h"
+namespace Poco {
+namespace RTSP {
 
 using Poco::Net::StreamSocket;
 using Poco::Net::SocketAddress;
 
-namespace RTSP {
-
-class RTSP_SDK_API RTSPSession
+class RTSP_API RTSPSession
 	/// RTSPSession implements basic RTSP session management
 	/// for both RTSP clients and RTSP servers.
 	///
@@ -204,6 +205,7 @@ inline Poco::UInt16 RTSPSession::getCSeq() const
 	return _cSeq;
 }
 
-} // namespace RTSP
+} //	namespace RTSP
+} //	namespace Poco
 
 #endif // __RTSP_SESSION__H__

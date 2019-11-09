@@ -46,17 +46,17 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
-#include "common.h"
-#include "Field.h"
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/Field.h"
 
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	InfoField class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API InfoField : public Field
+class SDP_API InfoField : public Field
 	/// An Info represents the i= fields contained within either a MediaDescription
 	/// or a SessionDescription. 
 {
@@ -77,6 +77,7 @@ public:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__INFO_FIELD__H__
 

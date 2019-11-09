@@ -46,20 +46,20 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/Field.h"
+
 //	PoCo headers
 #include "Poco/DateTime.h"
 
-#include "sdp_parser.h"
-#include "common.h"
-#include "Field.h"
-
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	TimeField class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API TimeField : public Field
+class SDP_API TimeField : public Field
     /// A Time represents a t= field contained within a TimeDescription. 
     /// 
     /// A Time specifies the start and stop times for a SessionDescription.
@@ -101,6 +101,7 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__TIME_FIELD__H__
 

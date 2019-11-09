@@ -46,11 +46,11 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
-#include "common.h"
-#include "TimeZoneAdjustment.h"
-#include "Field.h"
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/Field.h"
+#include "Poco/SDP/TimeZoneAdjustment.h"
 
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -63,7 +63,7 @@ typedef std::vector<TimeZoneAdjustment> TimeZoneAdjustmentVec;
 //	TimeZoneAdjustmentField class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API TimeZoneAdjustmentField : public Field
+class SDP_API TimeZoneAdjustmentField : public Field
     /// This represents the z= field of RFC 2327. From RFC 2327:
     /// 
     /// To schedule a repeated session which spans a change from daylight-
@@ -115,6 +115,7 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__TIME_ZONE_ADJUSTMENT_FIELD__H__
 

@@ -40,11 +40,13 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "BandwidthModifiers.h"
+#include "Poco/SDP/BandwidthModifiers.h"
 
+namespace Poco {
 namespace SDP {
 
 const std::string ConferenceTotal					= "CT";
 const std::string ApplicationSpecificMaximum		= "AS";
 
 } //	namespace SDP
+} //	namespace Poco

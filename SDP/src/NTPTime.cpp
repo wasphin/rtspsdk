@@ -40,33 +40,34 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/NTPTime.h"
+
 //	PoCo headers
 #include "Poco/DateTime.h"
 #include "Poco/LocalDateTime.h"
-#include "Poco/Timestamp.h"
-#include "Poco/Timespan.h"
-#include "Poco/RegularExpression.h"
 #include "Poco/NumberParser.h"
+#include "Poco/RegularExpression.h"
+#include "Poco/Timespan.h"
+#include "Poco/Timestamp.h"
 #include "Poco/Util/OptionException.h"
 
 //	STL headers
 #include <map>
 
-#include "NTPTime.h"
+namespace Poco {
+namespace SDP {
 
-using std::string;
 using std::map;
+using std::string;
 
-using Poco::Int64;
 using Poco::DateTime;
+using Poco::Int64;
+using Poco::InvalidArgumentException;
 using Poco::LocalDateTime;
+using Poco::NumberParser;
+using Poco::RegularExpression;
 using Poco::Timespan;
 using Poco::Timestamp;
-using Poco::RegularExpression;
-using Poco::NumberParser;
-using Poco::InvalidArgumentException;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	NTPTime class implementation
@@ -175,3 +176,4 @@ Int64 NTPTime :: GetTime()
 }
 */
 } //	namespace SDP
+} //	namespace Poco

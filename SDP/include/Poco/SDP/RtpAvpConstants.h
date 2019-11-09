@@ -47,12 +47,12 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
-#include "common.h"
+#include "Poco/SDP/Common.h"
 
+namespace Poco {
 namespace SDP {
 
-typedef struct SDP_PARSER_API _RtpAvpConstants
+typedef struct SDP_API _RtpAvpConstants
 /// This class defines some constants that can be used when creating MediaFields with the RTP/AVP
 /// transport protocol.
 {
@@ -182,6 +182,7 @@ typedef struct SDP_PARSER_API _RtpAvpConstants
 } RtpAvpConstants;
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__RTP_AVP_CONSTANTS__H__
 

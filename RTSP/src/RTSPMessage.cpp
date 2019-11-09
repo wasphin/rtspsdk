@@ -36,19 +36,19 @@
 //
 ******************************************************************************/
 
+#include "Poco/RTSP/RTSPMessage.h"
 
 #include "Poco/NumberFormatter.h"
 #include "Poco/NumberParser.h"
 #include "Poco/String.h"
 
-#include "RTSPMessage.h"
+namespace Poco {
+namespace RTSP {
 
+using Poco::icompare;
 using Poco::NumberFormatter;
 using Poco::NumberParser;
-using Poco::icompare;
 using Poco::Net::MediaType;
-
-namespace RTSP {
 
 const std::string RTSPMessage::RTSP_1_0                   = "RTSP/1.0";
 const int         RTSPMessage::UNKNOWN_CONTENT_LENGTH     = -1;
@@ -139,5 +139,5 @@ const std::string& RTSPMessage::getContentType() const
 	}
 }
 
-} // namespace RTSP
-
+} //	namespace RTSP
+} //	namespace Poco

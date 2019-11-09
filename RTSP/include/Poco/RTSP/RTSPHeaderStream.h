@@ -44,23 +44,21 @@
 #ifndef __RTSP_HEADER_STREAM__H__
 #define __RTSP_HEADER_STREAM__H__
 
+#include "Poco/RTSP/RTSPBasicStreamBuf.h"
+
+#include "Poco/MemoryPool.h"
+#include "Poco/Net/Net.h"
+
 #include <cstddef>
 #include <istream>
 #include <ostream>
 
-#include "Poco/Net/Net.h"
-#include "Poco/MemoryPool.h"
-
-#include "rtsp_sdk.h"
-#include "RTSPBasicStreamBuf.h"
-
+namespace Poco {
 namespace RTSP {
-
 
 class RTSPSession;
 
-
-class RTSP_SDK_API RTSPHeaderStreamBuf: public RTSPBasicStreamBuf
+class RTSP_API RTSPHeaderStreamBuf: public RTSPBasicStreamBuf
 	/// This is the streambuf class used for reading from a RTSP header
 	/// in a RTSPSession.
 {
@@ -80,7 +78,7 @@ private:
 };
 
 
-class RTSP_SDK_API RTSPHeaderIOS: public virtual std::ios
+class RTSP_API RTSPHeaderIOS: public virtual std::ios
 	/// The base class for RTSPHeaderInputStream.
 {
 public:
@@ -93,7 +91,7 @@ protected:
 };
 
 
-class RTSP_SDK_API RTSPHeaderInputStream: public RTSPHeaderIOS, public std::istream
+class RTSP_API RTSPHeaderInputStream: public RTSPHeaderIOS, public std::istream
 	/// This class is for internal use by RTSPSession only.
 {
 public:
@@ -108,7 +106,7 @@ private:
 };
 
 
-class RTSP_SDK_API RTSPHeaderOutputStream: public RTSPHeaderIOS, public std::ostream
+class RTSP_API RTSPHeaderOutputStream: public RTSPHeaderIOS, public std::ostream
 	/// This class is for internal use by RTSPSession only.
 {
 public:
@@ -122,8 +120,7 @@ private:
 	static Poco::MemoryPool _pool;
 };
 
-
-} // namespace RTSP
-
+} //	namespace RTSP
+} //	namespace Poco
 
 #endif // __RTSP_HEADER_STREAM__H__

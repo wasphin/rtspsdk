@@ -43,19 +43,19 @@
 #ifndef __RTSP_MESSAGE__H__
 #define __RTSP_MESSAGE__H__
 
+#include "Poco/RTSP/RTSP.h"
 
-#include "Poco/Net/Net.h"
 #include "Poco/Net/MediaType.h"
 #include "Poco/Net/MessageHeader.h"
+#include "Poco/Net/Net.h"
 
-#include "rtsp_sdk.h"
-
-using Poco::Net::MessageHeader;
-using Poco::Net::MediaType;
-
+namespace Poco {
 namespace RTSP {
 
-class RTSP_SDK_API RTSPMessage: public MessageHeader
+using Poco::Net::MediaType;
+using Poco::Net::MessageHeader;
+
+class RTSP_API RTSPMessage: public MessageHeader
 	/// The base class for RTSPRequest and RTSPResponse.
 	///
 	/// Defines the common properties of all RTSP messages.
@@ -132,6 +132,7 @@ inline const std::string& RTSPMessage::getVersion() const
 	return _version;
 }
 
-} // namespace RTSP
+} //	namespace RTSP
+} //	namespace Poco
 
 #endif // __RTSP_MESSAGE__H__

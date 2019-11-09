@@ -46,18 +46,17 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/Field.h"
 
-#include "common.h"
-#include "Field.h"
-
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	AttributeField class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API AttributeField : public Field
+class SDP_API AttributeField : public Field
 	/// An Attribute represents the a= fields contained in either a MediaDescription or
 	/// SessionDescription. They can be either an identity or a name-value pair.
 	/// 
@@ -107,6 +106,7 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__ATTRIBUTE_FIELD__H__
 

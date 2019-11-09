@@ -40,20 +40,21 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/BandwidthField.h"
+
 //	PoCo headers
-#include "Poco/NumberParser.h"
 #include "Poco/NumberFormatter.h"
+#include "Poco/NumberParser.h"
 #include "Poco/Util/OptionException.h"
 
-#include "BandwidthField.h"
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
-using Poco::NumberParser;
 using Poco::NumberFormatter;
+using Poco::NumberParser;
 using Poco::Util::InvalidArgumentException;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	BandwidthField class implementation
@@ -138,5 +139,4 @@ inline std::string BandwidthField :: getValue() const
 }
 
 } //	namespace SDP
-
-
+} //	namespace Poco

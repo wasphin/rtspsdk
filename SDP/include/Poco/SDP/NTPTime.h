@@ -46,14 +46,14 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/Common.h"
+
 //	PoCo headers
-#include "Poco/Types.h"
 #include "Poco/DateTime.h"
 #include "Poco/Timespan.h"
+#include "Poco/Types.h"
 
-#include "sdp_parser.h"
-#include "common.h"
-
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -67,7 +67,7 @@ namespace SDP {
 //	NTPTime class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API NTPTime
+class SDP_API NTPTime
 	/// A helper class for converting DateTimes and TimeSpans
 	/// to and from NTP timestamps.
 {
@@ -113,6 +113,7 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__NTP_TIME__H__
 

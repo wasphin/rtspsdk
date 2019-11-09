@@ -40,16 +40,17 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/PortRange.h"
+
 //	PoCo headers
 #include "Poco/NumberFormatter.h"
 
-#include "PortRange.h"
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
 using Poco::NumberFormatter;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	PortRange class implementation
@@ -147,3 +148,4 @@ string PortRange :: toString() const
 }
 
 } //	namespace SDP
+} //	namespace Poco

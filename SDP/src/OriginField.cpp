@@ -40,21 +40,22 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/OriginField.h"
+
 //	PoCo headers
-#include "Poco/NumberParser.h"
 #include "Poco/NumberFormatter.h"
+#include "Poco/NumberParser.h"
 #include "Poco/Timestamp.h"
 
-#include "OriginField.h"
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
 using Poco::Int64;
-using Poco::NumberParser;
 using Poco::NumberFormatter;
+using Poco::NumberParser;
 using Poco::Timestamp;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	OriginField class implementation
@@ -206,5 +207,5 @@ string OriginField :: formatString(const std::string & username,
 	return str;
 }
 
-
 } //	namespace SDP
+} //	namespace Poco

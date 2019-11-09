@@ -40,18 +40,19 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-//	PoCo headers
-#include "Poco/NumberParser.h"
-#include "Poco/NumberFormatter.h"
+#include "Poco/SDP/VersionField.h"
 
-#include "VersionField.h"
+//	PoCo headers
+#include "Poco/NumberFormatter.h"
+#include "Poco/NumberParser.h"
+
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
-using Poco::NumberParser;
 using Poco::NumberFormatter;
-
-namespace SDP {
+using Poco::NumberParser;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	VersionField class implementation
@@ -113,3 +114,4 @@ inline int VersionField :: getVersion() const
 }
 
 } //	namespace SDP
+} //	namespace Poco

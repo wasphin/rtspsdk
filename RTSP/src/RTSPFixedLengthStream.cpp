@@ -36,11 +36,10 @@
 //
 ******************************************************************************/
 
+#include "Poco/RTSP/RTSPFixedLengthStream.h"
+#include "Poco/RTSP/RTSPSession.h"
 
-#include "RTSPFixedLengthStream.h"
-#include "RTSPSession.h"
-
-
+namespace Poco {
 namespace RTSP {
 
 
@@ -185,4 +184,5 @@ void RTSPFixedLengthOutputStream::operator delete(void* ptr)
 }
 
 
-} // namespace RTSP
+} //	namespace RTSP
+} //	namespace Poco

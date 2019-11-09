@@ -36,17 +36,18 @@
 //
 ******************************************************************************/
 
+#include "Poco/RTSP/RTSPSession.h"
 
-#include "RTSPSession.h"
 #include "Poco/Net/HTTPBufferAllocator.h"
 #include "Poco/Net/NetException.h"
+
 #include <cstring>
 
+namespace Poco {
+namespace RTSP {
 
 using Poco::TimeoutException;
 using Poco::Net::HTTPBufferAllocator;
-
-namespace RTSP {
 
 RTSPSession::RTSPSession():
 	_pBuffer(NULL),
@@ -221,5 +222,5 @@ void RTSPSession::setCSeq(const Poco::UInt16& cSeq)
 	_cSeq = cSeq;
 }
 
-} // namespace RTSP
-
+} //	namespace RTSP
+} //	namespace Poco

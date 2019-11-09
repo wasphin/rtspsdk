@@ -1,10 +1,7 @@
 /*****************************************************************************
 //	SDP Parser Classes
 //
-//	Field Class
-//
-//	description:
-//		represents abstract SDP description field
+//	Common macroses, definitions and functions
 //
 //	revision of last commit:
 //		$Rev$
@@ -39,69 +36,50 @@
 //
 ******************************************************************************/
 
-#ifndef __FIELD__H__
-#define __FIELD__H__
+#ifndef __COMMON__H__
+#define __COMMON__H__
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "Poco/SDP/Common.h"
+//	headers
+#include "Poco/SDP/SDP.h"
+
+//	PoCo headers
+#include "Poco/Types.h"
+
+//	STL headers
+#include <string>
+#include <vector>
 
 namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//	Field class
+//	Definitions
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_API Field
-	/// A Field is an abstract class representing a single line of information
-	/// in a SessionDescription.
-{
-public:
-	
-	Field(const std::string & field);
-	/// Creates a new Field from the full field string.
+typedef std::vector<std::string> StringVec;
 
-	Field(const std::string & type, const std::string & value);
-	/// Creates a new Field with specified type and value.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//	Functions
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	Field(const Field & field);
-	/// Creates a copy of specified Field object.
+SDP_API StringVec split(const std::string & str, char splitChar);
+/// Returns a string array containing the substrings in this instance
+/// that are delimited by elements of the specified char.
 
-	Field & operator=(const Field & field);
-	/// Copies the specified Field object.
+SDP_API StringVec split(const std::string & str, const std::string & splitString);
+/// Returns a string array containing the substrings in this instance
+/// that are delimited by the specified split string.
 
-	char getType() const;
-	/// Returns the field type.
-
-	virtual std::string getValue() const;
-	/// Returns the field value.
-
-	virtual std::string toString() const;
-	/// Converts a Field to it's string representation.
-
-	virtual ~Field() = 0;
-	/// Destroys the Field object.
-
-protected:
-
-	Field();
-	/// Default constructor.
-
-protected:
-
-	char			_type;
-	/// Field type character.
-
-	std::string		_value;
-	/// Field value string.
-
-
-};
+SDP_API std::string trim(const std::string & str, char trimChar);
+/// Removes all occurrences of the specified character
+/// from the string. 
 
 } //	namespace SDP
 } //	namespace Poco
 
-#endif	//	__FIELD__H__
+#endif	//	__COMMON__H__
+

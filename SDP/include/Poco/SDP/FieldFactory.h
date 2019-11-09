@@ -46,31 +46,31 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
-#include "common.h"
-#include "AttributeField.h"
-#include "BandwidthField.h"
-#include "ConnectionField.h"
-#include "EMailField.h"
-#include "InfoField.h"
-#include "KeyField.h"
-#include "MediaField.h"
-#include "OriginField.h"
-#include "PhoneField.h"
-#include "SessionNameField.h"
-#include "TimeField.h"
-#include "TimeRepetitionField.h"
-#include "TimeZoneAdjustmentField.h"
-#include "URIField.h"
-#include "VersionField.h"
+#include "Poco/SDP/AttributeField.h"
+#include "Poco/SDP/BandwidthField.h"
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/ConnectionField.h"
+#include "Poco/SDP/EMailField.h"
+#include "Poco/SDP/InfoField.h"
+#include "Poco/SDP/KeyField.h"
+#include "Poco/SDP/MediaField.h"
+#include "Poco/SDP/OriginField.h"
+#include "Poco/SDP/PhoneField.h"
+#include "Poco/SDP/SessionNameField.h"
+#include "Poco/SDP/TimeField.h"
+#include "Poco/SDP/TimeRepetitionField.h"
+#include "Poco/SDP/TimeZoneAdjustmentField.h"
+#include "Poco/SDP/URIField.h"
+#include "Poco/SDP/VersionField.h"
 
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	FieldFactory class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API FieldFactory
+class SDP_API FieldFactory
 	/// This class describes a range of addresses.
 {
 public:
@@ -89,6 +89,7 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__FIELD_FACTORY__H__
 

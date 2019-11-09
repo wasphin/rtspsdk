@@ -44,19 +44,21 @@
 #define __RTSP_BASIC_STREAM_BUF__H__
 
 
-#include "Poco/Net/Net.h"
+#include "Poco/RTSP/RTSP.h"
+
 #include "Poco/BufferedStreamBuf.h"
 #include "Poco/Net/HTTPBufferAllocator.h"
+#include "Poco/Net/Net.h"
+
+namespace Poco {
+namespace RTSP {
 
 using Poco::Net::HTTPBufferAllocator;
 
-namespace RTSP {
-
-
 typedef Poco::BasicBufferedStreamBuf<char, std::char_traits<char>, HTTPBufferAllocator> RTSPBasicStreamBuf;
 
-
-} // namespace RTSP
+} //	namespace RTSP
+} //	namespace Poco
 
 
 #endif // __RTSP_BASIC_STREAM_BUF__H__

@@ -40,24 +40,25 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-//	PoCo headers
-#include "Poco/NumberParser.h"
-#include "Poco/NumberFormatter.h"
-#include "Poco/Timespan.h"
-#include "Poco/Exception.h"
+#include "Poco/SDP/TimeRepetitionField.h"
+#include "Poco/SDP/NTPTime.h"
 
-#include "NTPTime.h"
-#include "TimeRepetitionField.h"
+//	PoCo headers
+#include "Poco/Exception.h"
+#include "Poco/NumberFormatter.h"
+#include "Poco/NumberParser.h"
+#include "Poco/Timespan.h"
+
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
 using Poco::Int64;
-using Poco::NumberParser;
 using Poco::NumberFormatter;
-using Poco::Timespan;
+using Poco::NumberParser;
 using Poco::SyntaxException;
-
-namespace SDP {
+using Poco::Timespan;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	TimeRepetitionField class implementation
@@ -211,3 +212,4 @@ std::string TimeRepetitionField :: formatString(const Timespan & interval,
 }
 
 } //	namespace SDP
+} //	namespace Poco

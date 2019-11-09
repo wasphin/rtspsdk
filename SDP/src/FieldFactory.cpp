@@ -40,16 +40,17 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/FieldFactory.h"
+
 //	PoCo headers
 #include "Poco/Util/OptionException.h"
 
-#include "FieldFactory.h"
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
 using Poco::Util::InvalidArgumentException;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	AddressRange class implementation
@@ -156,3 +157,4 @@ void FieldFactory :: DestroyInstance(Field * pField)
 }
 
 } //	namespace SDP
+} //	namespace Poco

@@ -46,16 +46,15 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
-#include "common.h"
-#include "MediaField.h"
-#include "InfoField.h"
-#include "ConnectionField.h"
-#include "BandwidthField.h"
-#include "KeyField.h"
-#include "AttributeField.h"
+#include "Poco/SDP/AttributeField.h"
+#include "Poco/SDP/BandwidthField.h"
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/ConnectionField.h"
+#include "Poco/SDP/InfoField.h"
+#include "Poco/SDP/KeyField.h"
+#include "Poco/SDP/MediaField.h"
 
-
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -68,7 +67,7 @@ typedef std::vector<AttributeField> AttributeVec;
 //	MediaDescription class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API MediaDescription
+class SDP_API MediaDescription
     /// This class describes a given media connection. A SessionDescription
     /// may have zero or more MediaDescription's.
 {
@@ -174,6 +173,7 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__MEDIA_DESCRIPTION__H__
 

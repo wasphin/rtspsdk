@@ -36,13 +36,11 @@
 //
 ******************************************************************************/
 
+#include "Poco/RTSP/RTSPHeaderStream.h"
+#include "Poco/RTSP/RTSPSession.h"
 
-#include "RTSPHeaderStream.h"
-#include "RTSPSession.h"
-
-
+namespace Poco {
 namespace RTSP {
-
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	RTSPHeaderStreamBuf class implementation
@@ -184,4 +182,5 @@ void RTSPHeaderOutputStream::operator delete(void* ptr)
 }
 
 
-} // namespace RTSP
+} //	namespace RTSP
+} //	namespace Poco

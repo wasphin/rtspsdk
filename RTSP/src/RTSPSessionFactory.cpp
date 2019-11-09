@@ -36,18 +36,18 @@
 //
 ******************************************************************************/
 
+#include "Poco/RTSP/RTSPSessionFactory.h"
+#include "Poco/RTSP/RTSPSessionInstantiator.h"
 
 #include "Poco/Exception.h"
-#include "RTSPSessionFactory.h"
-#include "RTSPSessionInstantiator.h"
 
+namespace Poco {
+namespace RTSP {
 
-using Poco::SingletonHolder;
+using Poco::ExistsException;
 using Poco::FastMutex;
 using Poco::NotFoundException;
-using Poco::ExistsException;
-
-namespace RTSP {
+using Poco::SingletonHolder;
 
 RTSPSessionFactory::RTSPSessionFactory():
 	_proxyPort(0)
@@ -158,5 +158,5 @@ RTSPSessionFactory::InstantiatorInfo::InstantiatorInfo(RTSPSessionInstantiator* 
 	poco_check_ptr (pIn);
 }
 
-} // namespace RTSP
-
+} //	namespace RTSP
+} //	namespace Poco

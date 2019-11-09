@@ -40,11 +40,12 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "AttributeField.h"
+#include "Poco/SDP/AttributeField.h"
+
+namespace Poco {
+namespace SDP {
 
 using std::string;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	AttributeField class implementation
@@ -138,3 +139,4 @@ inline std::string AttributeField :: getValue() const
 }
 
 } //	namespace SDP
+} //	namespace Poco

@@ -40,22 +40,23 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-//	PoCo headers
-#include "Poco/NumberParser.h"
-#include "Poco/NumberFormatter.h"
-#include "Poco/Exception.h"
+#include "Poco/SDP/TimeField.h"
+#include "Poco/SDP/NTPTime.h"
 
-#include "NTPTime.h"
-#include "TimeField.h"
+//	PoCo headers
+#include "Poco/Exception.h"
+#include "Poco/NumberFormatter.h"
+#include "Poco/NumberParser.h"
+
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
 using Poco::DateTime;
-using Poco::NumberParser;
-using Poco::NumberFormatter;
 using Poco::Exception;
-
-namespace SDP {
+using Poco::NumberFormatter;
+using Poco::NumberParser;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	TimeField class implementation
@@ -155,3 +156,4 @@ void TimeField :: Init()
 }
 
 } //	namespace SDP
+} //	namespace Poco

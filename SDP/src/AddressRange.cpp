@@ -40,19 +40,20 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/AddressRange.h"
+
 //	PoCo headers
 #include "Poco/NumberFormatter.h"
 #include "Poco/Util/OptionException.h"
 
-#include "AddressRange.h"
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
 using Poco::NumberFormatter;
-using Poco::Util::InvalidArgumentException;
 using Poco::Net::IPAddress;
-
-namespace SDP {
+using Poco::Util::InvalidArgumentException;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	AddressRange class implementation
@@ -171,5 +172,4 @@ std::string AddressRange :: toString() const
 }
 
 } //	namespace SDP
-
-
+} //	namespace Poco

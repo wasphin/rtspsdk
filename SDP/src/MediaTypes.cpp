@@ -40,8 +40,9 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "MediaTypes.h"
+#include "Poco/SDP/MediaTypes.h"
 
+namespace Poco {
 namespace SDP {
 
 const std::string MediaTypes::Audio			= "audio";
@@ -51,5 +52,6 @@ const std::string MediaTypes::Data			= "data";
 const std::string MediaTypes::Control		= "control";
 
 } //	namespace SDP
+} //	namespace Poco
 
 

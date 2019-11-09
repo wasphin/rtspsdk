@@ -40,11 +40,12 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "PhoneField.h"
+#include "Poco/SDP/PhoneField.h"
+
+namespace Poco {
+namespace SDP {
 
 using std::string;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	PhoneField class implementation
@@ -83,3 +84,4 @@ PhoneField & PhoneField :: operator=(const PhoneField & phoneField)
 }
 
 } //	namespace SDP
+} //	namespace Poco

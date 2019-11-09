@@ -46,20 +46,20 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/Field.h"
+
 //	PoCo headers
 #include "Poco/URI.h"
 
-#include "sdp_parser.h"
-#include "common.h"
-#include "Field.h"
-
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	URIField class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API URIField : public Field
+class SDP_API URIField : public Field
 	/// A URIField represents the u= field within a SessionDescription.
 {
 public:
@@ -85,6 +85,7 @@ public:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__URI_FIELD__H__
 

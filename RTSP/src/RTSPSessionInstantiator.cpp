@@ -36,17 +36,14 @@
 //
 ******************************************************************************/
 
+#include "Poco/RTSP/RTSPSessionInstantiator.h"
+#include "Poco/RTSP/RTSPClientSession.h"
+#include "Poco/RTSP/RTSPSessionFactory.h"
 
-#include "RTSPSessionInstantiator.h"
-#include "RTSPSessionFactory.h"
-#include "RTSPClientSession.h"
-
-
-using Poco::URI;
-
-
+namespace Poco {
 namespace RTSP {
 
+using Poco::URI;
 
 RTSPSessionInstantiator::RTSPSessionInstantiator():
 	_proxyPort(0)
@@ -86,5 +83,5 @@ void RTSPSessionInstantiator::setProxy(const std::string& host, Poco::UInt16 por
 	_proxyPort = port;
 }
 
-
-} // namespace RTSP
+} //	namespace RTSP
+} //	namespace Poco

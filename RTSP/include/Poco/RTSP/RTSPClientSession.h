@@ -43,24 +43,21 @@
 #ifndef __RTSP_CLIENT_SESSION__H__
 #define __RTSP_CLIENT_SESSION__H__
 
+#include "Poco/RTSP/RTSPSession.h"
 
 #include "Poco/Net/Net.h"
 #include "Poco/Net/SocketAddress.h"
+
 #include <istream>
 #include <ostream>
 
-#include "rtsp_sdk.h"
-#include "RTSPSession.h"
-
+namespace Poco {
 namespace RTSP {
-
 
 class RTSPRequest;
 class RTSPResponse;
 
-
-
-class RTSP_SDK_API RTSPClientSession: public RTSPSession
+class RTSP_API RTSPClientSession: public RTSPSession
 	/// This class implements the client-side of
 	/// a RTSP session.
 	///
@@ -128,7 +125,7 @@ public:
 		
 	void setProxyPort(Poco::UInt16 port);
 		/// Sets the port number of the proxy server.
-		
+
 	const std::string& getProxyHost() const;
 		/// Returns the proxy host name.
 		
@@ -140,7 +137,7 @@ public:
 		
 	const Poco::Timespan& getKeepAliveTimeout() const;
 		/// Returns the connection timeout for HTTP connections.
-*/		
+*/
 	virtual std::ostream& sendRequest(RTSPRequest& request);
 		/// Sends the header for the given RTSP request to
 		/// the server.
@@ -160,13 +157,13 @@ public:
 		/// destroyed.
 	
 protected:
-	
+
 	void reconnect();
 		/// Connects the underlying socket to the RTSP server.
 
 	int write(const char* buffer, std::streamsize length);
 		/// Writes the specified buffer.
-	
+
 	virtual std::string getHostInfo() const;
 		/// Returns the target host and port number for proxy requests.
 
@@ -260,7 +257,8 @@ inline const Poco::Timespan& RTSPClientSession::getKeepAliveTimeout() const
 }
 */
 
-} // namespace RTSP
+} //	namespace RTSP
+} //	namespace Poco
 
 
 #endif // __RTSP_CLIENT_SESSION__H__

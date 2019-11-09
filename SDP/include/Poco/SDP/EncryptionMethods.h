@@ -46,12 +46,12 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
-#include "common.h"
+#include "Poco/SDP/Common.h"
 
+namespace Poco {
 namespace SDP {
 
-typedef struct SDP_PARSER_API _EncryptionMethod
+typedef struct SDP_API _EncryptionMethod
 /// A structure of listed encryption methods.
 {
 	static const std::string None;
@@ -72,6 +72,7 @@ typedef struct SDP_PARSER_API _EncryptionMethod
 } EncryptionMethod;
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__ENCRYPTION_METHODS__H__
 

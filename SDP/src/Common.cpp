@@ -1,10 +1,7 @@
 /*****************************************************************************
 //	SDP Parser Classes
 //
-//	Field Class
-//
-//	description:
-//		represents abstract SDP description field
+//	Common macroses, definitions and functions
 //
 //	revision of last commit:
 //		$Rev$
@@ -39,9 +36,6 @@
 //
 ******************************************************************************/
 
-#ifndef __FIELD__H__
-#define __FIELD__H__
-
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,57 +45,66 @@
 namespace Poco {
 namespace SDP {
 
+using std::string;
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//	Field class
+//	Functions implementations
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_API Field
-	/// A Field is an abstract class representing a single line of information
-	/// in a SessionDescription.
+StringVec split(const string & str, char splitChar)
 {
-public:
-	
-	Field(const std::string & field);
-	/// Creates a new Field from the full field string.
+	StringVec parts;
+	string::size_type curBegin = 0;
+	string::size_type curCharPos = string::npos;
+	do
+	{
+		curCharPos = str.find(splitChar, curBegin);
+		string curString = str.substr(curBegin, curCharPos - curBegin);
+		parts.push_back(curString);
+		curBegin = curCharPos + 1;
+	} 
+	while (string::npos != curCharPos);
 
-	Field(const std::string & type, const std::string & value);
-	/// Creates a new Field with specified type and value.
+	return parts;
+}
 
-	Field(const Field & field);
-	/// Creates a copy of specified Field object.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	Field & operator=(const Field & field);
-	/// Copies the specified Field object.
+StringVec split(const string & str, const string & splitString)
+{
+	StringVec parts;
+	string::size_type curBegin = 0;
+	string::size_type curStringPos = string::npos;
+	do
+	{
+		curStringPos = str.find(splitString, curBegin);
+		string curString = str.substr(curBegin, curStringPos - curBegin);
+		parts.push_back(curString);
+		curBegin = curStringPos + splitString.size();
+	} 
+	while (string::npos != curStringPos);
 
-	char getType() const;
-	/// Returns the field type.
+	return parts;
+}
 
-	virtual std::string getValue() const;
-	/// Returns the field value.
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	virtual std::string toString() const;
-	/// Converts a Field to it's string representation.
+string trim(const string & str, char trimChar)
+{
+	string trimmedStr;
+	trimmedStr.reserve(str.size());
+	for(string::const_iterator iter = str.begin();
+		str.end() != iter;
+		++iter)
+	{
+		if(*iter != trimChar)
+		{
+			trimmedStr.push_back(*iter);
+		}
+	}
 
-	virtual ~Field() = 0;
-	/// Destroys the Field object.
-
-protected:
-
-	Field();
-	/// Default constructor.
-
-protected:
-
-	char			_type;
-	/// Field type character.
-
-	std::string		_value;
-	/// Field value string.
-
-
-};
+	return trimmedStr;
+}
 
 } //	namespace SDP
 } //	namespace Poco
-
-#endif	//	__FIELD__H__

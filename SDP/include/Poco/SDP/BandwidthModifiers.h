@@ -46,12 +46,12 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
-#include "common.h"
+#include "Poco/SDP/Common.h"
 
+namespace Poco {
 namespace SDP {
 
-typedef struct SDP_PARSER_API _BandwidthModifiers
+typedef struct SDP_API _BandwidthModifiers
 /// A structure of listed bandwidth modifiers.
 {
 	static const std::string ConferenceTotal;
@@ -76,6 +76,7 @@ typedef struct SDP_PARSER_API _BandwidthModifiers
 } BandwidthModifiers;
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__BANDWIDTH_MODIFIERS__H__
 

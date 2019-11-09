@@ -46,18 +46,20 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+//	headers
+#include "Poco/SDP/SDP.h"
+
 //	PoCo headers
 #include "Poco/Net/IPAddress.h"
 
-#include "sdp_parser.h"
-
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	AddressRange class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API AddressRange
+class SDP_API AddressRange
 	/// This class describes a range of addresses.
 {
 public:
@@ -107,6 +109,6 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__ADDRESS_RANGE__H__
-

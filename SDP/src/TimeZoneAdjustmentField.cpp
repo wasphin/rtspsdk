@@ -40,16 +40,17 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#include "Poco/SDP/TimeZoneAdjustmentField.h"
+
 //	PoCo headers
 #include "Poco/Util/OptionException.h"
 
-#include "TimeZoneAdjustmentField.h"
+namespace Poco {
+namespace SDP {
 
 using std::string;
 
 using Poco::Util::InvalidArgumentException;
-
-namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //	TimeZoneAdjustmentField class implementation
@@ -113,3 +114,4 @@ inline TimeZoneAdjustmentVec TimeZoneAdjustmentField :: getZoneAdjustments() con
 }
 
 } //	namespace SDP
+} //	namespace Poco

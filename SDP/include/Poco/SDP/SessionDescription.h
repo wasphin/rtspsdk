@@ -46,23 +46,22 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
-#include "common.h"
+#include "Poco/SDP/BandwidthField.h"
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/ConnectionField.h"
+#include "Poco/SDP/EMailField.h"
+#include "Poco/SDP/InfoField.h"
+#include "Poco/SDP/KeyField.h"
+#include "Poco/SDP/MediaDescription.h"
+#include "Poco/SDP/OriginField.h"
+#include "Poco/SDP/PhoneField.h"
+#include "Poco/SDP/SessionNameField.h"
+#include "Poco/SDP/TimeDescription.h"
+#include "Poco/SDP/TimeZoneAdjustmentField.h"
+#include "Poco/SDP/URIField.h"
+#include "Poco/SDP/VersionField.h"
 
-#include "BandwidthField.h"
-#include "ConnectionField.h"
-#include "EMailField.h"
-#include "InfoField.h"
-#include "KeyField.h"
-#include "OriginField.h"
-#include "PhoneField.h"
-#include "SessionNameField.h"
-#include "TimeZoneAdjustmentField.h"
-#include "URIField.h"
-#include "VersionField.h"
-#include "TimeDescription.h"
-#include "MediaDescription.h"
-
+namespace Poco {
 namespace SDP {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -77,7 +76,7 @@ typedef std::vector<MediaDescription> MediaVec;
 //	SessionDescription class
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-class SDP_PARSER_API SessionDescription
+class SDP_API SessionDescription
     /// This class describes a session.
 {
 public:
@@ -209,6 +208,7 @@ private:
 };
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__SESSION_DESCRIPTION__H__
 

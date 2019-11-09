@@ -46,12 +46,12 @@
 //	Includes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#include "sdp_parser.h"
-#include "common.h"
+#include "Poco/SDP/Common.h"
 
+namespace Poco {
 namespace SDP {
 
-typedef struct SDP_PARSER_API _MediaTypes
+typedef struct SDP_API _MediaTypes
 /// A structure of listed primary MIME types.
 {
 	static const std::string Audio;
@@ -73,6 +73,7 @@ typedef struct SDP_PARSER_API _MediaTypes
 } MediaTypes;
 
 } //	namespace SDP
+} //	namespace Poco
 
 #endif	//	__MEDIA_TYPES__H__
 
