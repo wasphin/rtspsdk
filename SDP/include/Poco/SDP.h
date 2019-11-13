@@ -1,0 +1,36 @@
+#ifndef POCO_SDP_INCLUDED
+#define POCO_SDP_INCLUDED
+
+#include "Poco/SDP/SDP.h"
+
+#include "Poco/SDP/AddressRange.h"
+#include "Poco/SDP/AttributeField.h"
+#include "Poco/SDP/BandwidthField.h"
+#include "Poco/SDP/BandwidthModifiers.h"
+#include "Poco/SDP/Common.h"
+#include "Poco/SDP/ConnectionField.h"
+#include "Poco/SDP/EMailField.h"
+#include "Poco/SDP/EncryptionMethods.h"
+#include "Poco/SDP/FieldFactory.h"
+#include "Poco/SDP/Field.h"
+#include "Poco/SDP/InfoField.h"
+#include "Poco/SDP/KeyField.h"
+#include "Poco/SDP/MediaDescription.h"
+#include "Poco/SDP/MediaField.h"
+#include "Poco/SDP/MediaTypes.h"
+#include "Poco/SDP/NTPTime.h"
+#include "Poco/SDP/OriginField.h"
+#include "Poco/SDP/PhoneField.h"
+#include "Poco/SDP/PortRange.h"
+#include "Poco/SDP/RtpAvpConstants.h"
+#include "Poco/SDP/SessionDescription.h"
+#include "Poco/SDP/SessionNameField.h"
+#include "Poco/SDP/TimeDescription.h"
+#include "Poco/SDP/TimeField.h"
+#include "Poco/SDP/TimeRepetitionField.h"
+#include "Poco/SDP/TimeZoneAdjustmentField.h"
+#include "Poco/SDP/TimeZoneAdjustment.h"
+#include "Poco/SDP/URIField.h"
+#include "Poco/SDP/VersionField.h"
+
+#endif // POCO_SDP_INCLUDED
